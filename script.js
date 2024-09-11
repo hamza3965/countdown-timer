@@ -1,4 +1,4 @@
-const endDate = new Date("Dec 31, 2024 23:59:59").getTime();
+const endDate = new Date("Dec 31, 2025 23:59:59").getTime();
 
 // Function to update the countdown every second
 const countdownInterval = setInterval(function() {
