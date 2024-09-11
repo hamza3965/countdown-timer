@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    padding: 0 25px;
+    font-family: 'Arial', sans-serif;
+}
+
+.countdown-container {
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.7);
+    transition: 0.5s ease-in-out;
+}
+
+.countdown-container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #00bfff;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Countdown Layout */
+#countdown {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out, 0.3s ease-in-out;
+}
+
+.time:hover {
+    background-color: #444;
+    transform: translateY(-5px);
+}
+
+.time span:first-child {
+    font-size: 4rem;
+    color: #00bfff;
+    margin-bottom: 10px;
+    transition: color 0.5s ease-in-out;
+}
+
+.time span:last-child {
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+
+@media (max-width: 710px){
+    .time {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 710px) and (min-width: 439px){
+    #countdown div:last-child{
+        width: 88%;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .time span:first-child {
+        font-size: 2.5rem;
+    }
+
+    .time span:last-child {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 334px){
+    .countdown-container{
+        padding: 19px;
+    }
+}
